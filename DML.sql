@@ -1,76 +1,50 @@
-INSERT INTO ROL (ROL_ID, ROL_NOMB) VALUES
-(1, 'Admin'),
-(2, 'Usuario'),
-(3, 'Reclutador');
+INSERT INTO ROL VALUES
+(1,'Admin'),(2,'Usuario'),(3,'Reclutador');
 
-INSERT INTO DEPARTAMENTO (DEPAR_ID, DEPAR_NOMB) VALUES
-(1, 'Bogotá, D.C.'), (2, 'Antioquia'), (3, 'Cundinamarca'), (4, 'Valle del Cauca'), (5, 'Amazonas'),
-(6, 'Arauca'), (7, 'Atlántico'), (8, 'Bolívar'), (9, 'Boyacá'),(10, 'Caldas'),
-(11, 'Caquetá'), (12, 'Casanare'), (13, 'Cauca'), (14, 'Cesar'), (15, 'Chocó'),
-(16, 'Córdoba'), (17, 'Guainía'), (18, 'Guaviare'), (19, 'Huila'), (20, 'La Guajira'),
-(21, 'Magdalena'), (22, 'Meta'), (23, 'Nariño'), (24, 'Norte de Santander'),(25, 'Putumayo'),
-(26, 'Quindío'), (27, 'Risaralda'), (28, 'San Andrés y Providencia'), (29, 'Santander'), (30, 'Sucre'),
-(31, 'Tolima'), (32, 'Vaupés'), (33, 'Vichada');
+INSERT INTO DEPARTAMENTO VALUES
+(1,'BOGOTA D.C'),(2,'ANTIOQUIA'),(3,'CUNDINAMARCA'),(4,'VALLE DEL CAUCA'),(5,'ATLANTICO');
 
-INSERT INTO CATEGORIA_EMPR (CATEG_ID, NOMB_CATEG, DESCRIPCION) VALUES
-(1, 'Tecnología', 'Empresas dedicadas a desarrollo de software y servicios TI'),
-(2, 'Salud', 'Instituciones de atención médica y servicios de salud'),
-(3, 'Educación', 'Organizaciones dedicadas a procesos educativos'),
-(4, 'Finanzas', 'Entidades bancarias y de servicios financieros'),
-(5, 'Comercio', 'Comercios al por mayor y por menor');
+INSERT INTO CIUDAD VALUES
+(1,'BOGOTA D.C', 1),
+(2,'MEDELLIN',2),(3,'BELLO',2),(4,'ITAGUI',2),(5,'ENVIGADO',2),(6,'RIONEGRO',2),
+(7,'SOACHA',3),(8,'ZIPAQUIRA',3),(9,'CHIA',3),(10,'FACATATIVA',3),(11,'GIRARDOT',3),
+(12,'CALI',4),(13,'PALMIRA',4),(14,'BUENAVENTURA',4),(15,'TULUA',4),(16,'BUGA',4),
+(17,'BARRANQUILLA',5),(18,'SOLEDAD',5),(19,'MALAMBO',5),(20,'SABANALARGA',5),(21,'GALAPA',5);
 
-INSERT INTO VALORACION (VALR_ID, DESCRIPCION, PUNTUACION) VALUES
-(1, 'Excelente', 5),
-(2, 'Muy Buena', 4),
-(3, 'Buena', 3),
-(4, 'Regular', 2), # TOCA RELACIONAR EL ASPIRANTE A LA VALORACION
-(5, 'Mala', 1);
+INSERT INTO CATEGORIA_EMPR VALUES
+(1, 'TECNOLOGIA', 'Empresas dedicadas a desarrollo de software y servicios TI'),
+(2, 'SALUD', 'Instituciones de atención médica y servicios de salud'),
+(3, 'EDUCACION', 'Organizaciones dedicadas a procesos educativos'),
+(4, 'FINANZAS', 'Entidades bancarias y de servicios financieros'),
+(5, 'COMERCIO', 'Comercios al por mayor y por menor'),
+(6, 'ALIMENTICIOS', 'Empresas dedicadas a la producción y distribución de alimentos y bebidas');
 
-INSERT INTO DISCAPACIDAD (DISCAP_ID, NOMB_DISCAPACIDAD) VALUES
-(1, 'Visual'),
-(2, 'Auditiva'),
-(3, 'Motora');
+INSERT INTO TIPO_DOCUMENTO VALUES
+(1, 'C.C'),(2,'T.I');
 
-INSERT INTO GENERO (GENR_ID, TIP_GENR) VALUES
-(1, 1),  -- MACULINO
-(2, 0);  -- FEMENINO
+INSERT INTO DISCAPACIDAD VALUES
+(1,'Visual'),
+(2,'Auditiva'),
+(3,'Motora');
 
-INSERT INTO NIVEL_EDUCATIVO (N_EDU_ID, NOMB_NIV_EDU) VALUES
-(1, 'Primaria'),(2, 'Secundaria'),(3, 'Técnico'),
-(4, 'Tecnológico'),(5, 'Universitario'),(6, 'Postgrado');
+INSERT INTO GENERO VALUES
+(1, 'MASCULINO'),
+(0, 'FEMENINO');
 
-INSERT INTO INSTITUCION (NOMBRE, CIUDAD, DEPARTAMENTO, PAIS) VALUES
-('Universidad Nacional de Colombia', 'Bogotá, D.C.', 'Cundinamarca', 'Colombia'),
-('Universidad de Antioquia','Medellín','Antioquia','Colombia'),
-('Universidad del Valle','Cali','Valle del Cauca','Colombia'),
-('Instituto Tecnológico de Monterrey','Ciudad de México','Ciudad de México','México'),
-('Universidad de Buenos Aires','Buenos Aires','Buenos Aires', 'Argentina'); # TOCA PROCEDIMIENTO ALM PARA QUE LO AGREGUE EL USUARIO
+INSERT INTO NIVEL_EDUCATIVO VALUES
+(1,'Primaria'),(2,'Secundaria'),(3,'Técnico'),
+(4,'Tecnológico'),(5,'Universitario'),(6,'Postgrado');
 
-INSERT INTO TIPO_CONTRATO (TIP_CONT_ID, NOMB_CONT) VALUES
-(1, 'Término Fijo'),
-(2, 'Término Indefinido'),
-(3, 'Practicante'),
-(4, 'Aprendiz'),
-(5, 'Prestación de Servicios');
+INSERT INTO TIPO_CONTRATO VALUES
+(1,'Término Fijo'),(2,'Término Indefinido'),(3,'Practicante'),
+(4,'Aprendiz'),(5,'Prestación de Servicios');
 
--- 11. MODALIDAD: modalidades de trabajo
-INSERT INTO MODALIDAD (MODAL_ID, NOMB_MODAL) VALUES
-    (1, 'Presencial'),
-    (2, 'Remoto'),
-    (3, 'Híbrido');
+INSERT INTO MODALIDAD VALUES
+(1,'Presencial'),(2,'Remoto'),(3,'Híbrido');
 
--- 12. BENEFICIOS: beneficios que puede ofrecer una oferta de trabajo
-INSERT INTO BENEFICIOS (BENEF_ID, NOMB_BENEFICIO) VALUES
-    (1, 'Seguro de Salud'),
-    (2, 'Auxilio de Transporte'),
-    (3, 'Auxilio Educativo'),
-    (4, 'Comedor'),
-    (5, 'Bonificación por Desempeño');
+INSERT INTO BENEFICIOS VALUES
+(1,'Seguro de Salud'),(2,'Auxilio de Transporte'),(3,'Auxilio Educativo'),(4,'Bonificación por Desempeño');
 
--- 13. ESTADOS: estados de una postulación
-INSERT INTO ESTADOS (ESTAD_ID, NOMB_ESTADO) VALUES
-    (1, 'Pendiente'),
-    (2, 'Aceptado'),
-    (3, 'Rechazado'),
-    (4, 'En Entrevista'),
-    (5, 'Contratado');
+INSERT INTO ESTADOS VALUES
+(1,'Pendiente'),(2,'Aceptado'),(3,'Rechazado');
+
