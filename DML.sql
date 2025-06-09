@@ -1,5 +1,5 @@
 INSERT INTO ROL VALUES
-(1,'Admin'),(2,'Usuario'),(3,'Reclutador');
+(1,'Admin'),(2,'Aspirante'),(3,'Reclutador');
 
 INSERT INTO DEPARTAMENTO VALUES
 (1,'BOGOTA D.C'),(2,'ANTIOQUIA'),(3,'CUNDINAMARCA'),(4,'VALLE DEL CAUCA'),(5,'ATLANTICO');
