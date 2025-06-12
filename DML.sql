@@ -65,6 +65,6 @@ INSERT INTO MODALIDAD VALUES
 INSERT INTO BENEFICIOS VALUES
 (1,'Seguro de Salud'),(2,'Auxilio de Transporte'),(3,'Auxilio Educativo'),(4,'Bonificación por Desempeño');
 
-INSERT INTO ESTADOS VALUES
+INSERT INTO ESTADO VALUES
 (1,'Pendiente'),(2,'Aceptado'),(3,'Rechazado');
 
